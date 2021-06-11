@@ -14,7 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/kudoabhijeet/mysterio.git"
   },
-  "engines": { "node": "14.17.0" }, 
+  "engines": {
+    "node": "14.17.0"
+  },
   "keywords": [],
   "author": "Abhijeet Prasad",
   "license": "ISC",
