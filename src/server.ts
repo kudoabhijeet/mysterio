@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/', function (req, res) {
+app.get('/test', function (req, res) {
     res.send({
         "status": "running"
     })
