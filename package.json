@@ -1,0 +1,34 @@
+{
+  "name": "mysterio",
+  "version": "0.0.1",
+  "description": "Backend for Mysterio App",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node dist/run.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kudoabhijeet/mysterio.git"
+  },
+  "keywords": [],
+  "author": "Abhijeet Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kudoabhijeet/mysterio/issues"
+  },
+  "homepage": "https://github.com/kudoabhijeet/mysterio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "typeorm": "^0.2.34"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.12"
+  }
+}
