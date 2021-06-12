@@ -3,8 +3,8 @@ import { Router } from 'express'
 
 const route = Router()
 
-route.get('/urls/:code', async (req, res) => {
-    
+route.get('/all', async (req, res) => {
+    // TODO: get all content from database with controllers and services running count query
 
     return res.status(200).json({
         status: 'success',
@@ -14,18 +14,15 @@ route.get('/urls/:code', async (req, res) => {
 })
 
 route.post('/upload', async (req, res) => {
-    // TODO: create a new shortcode entry and send the details back
+    // TODO: create a new entry to database
+
+})
+
+route.post('/submit', async (req, res) => {
+    // TODO: record submission from user
     
 
 })
 
-route.put('/urls/:code', async (req, res) => {
-    
-
-    return res.status(201).json({
-        status: "success",
-        data: ''
-    })
-})
 
 export default route

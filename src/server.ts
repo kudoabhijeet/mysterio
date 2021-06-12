@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-
+import apiRoute from './routes/api'
 const app = express() 
 
 app.use(express.json())
@@ -11,8 +11,8 @@ app.get('/test', function (req, res) {
         "status": "running"
     })
   })
-// app.use('/api', apiRoute)
-// app.use('/', redirectRoute)
+app.use('/api', apiRoute)
+
 
 
 export default app
