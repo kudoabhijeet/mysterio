@@ -46,6 +46,10 @@ Database Details
 
 - Database of choice : PostgreSQL v13
 - Provider : Heroku PostgreSQL Add-on
+- Localhost : 
+    - `user: mysterio`
+    - `pass: mysterio`
+    - `port: default`
 
 Schema
 - Questions
@@ -55,3 +59,4 @@ Schema
 3. imageURL: string
 4. correctScore: number
 ```
+
