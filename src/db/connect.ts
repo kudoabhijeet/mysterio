@@ -22,5 +22,4 @@ export const connect = async () => await createConnection({
     logger: "advanced-console",
     entities: [ Questions ],
     synchronize: true,
-    // dropSchema: true, // TODO: never in production, drops tables on restart
 });

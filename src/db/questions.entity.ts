@@ -2,7 +2,7 @@ import { Column, Entity, getRepository, PrimaryColumn, PrimaryGeneratedColumn, R
 
 @Entity()
 export class Questions {
-    @PrimaryColumn({type: "bigint"})
+    @PrimaryGeneratedColumn('increment')
     id!: number
 
     @Column({type: "text"})
