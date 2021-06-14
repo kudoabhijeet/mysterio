@@ -4,7 +4,7 @@ Backend for Mysterio Web Application.
 ## Developer Guide
 ### API Endpoints
 
-`POST /upload`
+`POST api/upload`
 
 Request
 ```
@@ -18,24 +18,32 @@ Request
 Response (201)
 ```
 {
-    "status" : "success",
+    "status": "success",
+    "data": {
+        "hint": "Hello World",
+        "imageURL": "url for content",
+        "correctScore": 1234,
+        "id": 4
+    }
 }
 ```
-`GET /questions`
+`GET api/all`
 
 Successful Response (`CODE: 200`) 
 
 Get all questions, from the database.
 
 ```
-{   "status" : "success",
-    "count": 15,
-    "data" : {
-        "id": 1,
-        "hint" : "First edition of Macintosh",
-        "imageURL:" : "https://kudoabhijeet.com/img1.png",
-        "correctScore" : 1000
-    }
+{
+    "status": "success",
+    "score": 4936,
+    "data": [
+        {
+            "hint": "Hello World",
+            "imageURL": "url for content",
+            "correctScore": 1234
+        }
+    ]
 }
 ```
 
