@@ -1,17 +1,20 @@
 import { Router } from 'express'
 import { createQuestion, getQuestions } from '../controllers/questions.controller'
 
-
 const route = Router()
 
 route.get('/all', async (req, res) => {
     // TODO: get all content from database with controllers and services running count query
+    var sum = 0
     const questions = await getQuestions()
+    questions.forEach(question => {
+        sum += question.correctScore
+    })
     return res.status(200).json({
         status: 'success',
+        score: sum,
         data: questions
     })
-
 })
 
 route.post('/upload', async (req, res) => {

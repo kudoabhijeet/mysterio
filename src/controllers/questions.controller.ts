@@ -1,4 +1,5 @@
 import { getQuestionsRepo, Questions } from "../db/questions.entity";
+const _ = require('lodash');
 
 // save new question to database
 export async function createQuestion(hint: string, url : string, score : number ): Promise<Questions> {
@@ -14,7 +15,9 @@ export async function createQuestion(hint: string, url : string, score : number 
 //get question 
 export async function getQuestions() {
     const Questions = await getQuestionsRepo().find({ select: ["hint", "imageURL", "correctScore"]})
-    // TODO: random 6/9 questions from the array
+    
+    // const sixQuestions =  _.sampleSize(Questions, 6)
+    // return sixQuestions
     return Questions
 }
 
