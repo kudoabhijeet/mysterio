@@ -3,7 +3,7 @@ import { createQuestion, getQuestions } from '../controllers/questions.controlle
 const bodyParser = require('body-parser')
 const route = Router()
 
-route.use(bodyParser())
+route.use(bodyParser.json())
 
 route.get('/all', async (req, res) => {
     // TODO: get all content from database with controllers and services running count query
