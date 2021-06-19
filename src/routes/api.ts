@@ -1,7 +1,9 @@
 import { Router } from 'express'
 import { createQuestion, getQuestions } from '../controllers/questions.controller'
-
+const bodyParser = require('body-parser')
 const route = Router()
+
+route.use(bodyParser())
 
 route.get('/all', async (req, res) => {
     // TODO: get all content from database with controllers and services running count query

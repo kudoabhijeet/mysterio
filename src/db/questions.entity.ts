@@ -8,12 +8,11 @@ export class Questions {
     @Column({type: "text"})
     hint!: string
 
-    @Column()
+    @Column({type: "text"})
     imageURL!: string
 
     @Column()
     correctScore!: number
-    
 }
 
 export function getQuestionsRepo(): Repository<Questions> {

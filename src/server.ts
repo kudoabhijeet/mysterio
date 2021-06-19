@@ -13,6 +13,4 @@ app.get('/test', function (req, res) {
   })
 app.use('/api', apiRoute)
 
-
-
 export default app
