@@ -13,6 +13,7 @@ export const connect = async () => await createConnection({
     database: "d53pu41qal5a77",
     entities: [ Questions ],
     synchronize: true,
+    ssl: true
     // extra: { ssl: true, rejectUnauthorized: false },
 });
 
